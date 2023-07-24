@@ -4,7 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Electron Test App</title>
+    <title>siuuuu</title>
+    <style>
+      /* Estilos para el color de fondo celeste */
+      body {
+        background-color: #b0e2ff;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Estilos para el footer */
+      #footer {
+        background-color: #ff0000;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0;
+      }
+    </style>
   </head>
   <body>
     <h1>This is my auto-updated app</h1>
@@ -15,7 +33,12 @@
       This app will demonstrate how we can apply an auto update to an
       application.
     </p>
+    <!-- Botón de actualización -->
+    <button id="updateButton" disabled>Check for Updates</button>
 
-    <script defer src="./mainView.js"></script>
+    <div id="footer">Hola</div>
+
+    <!-- Contenido de la página -->
+    <script type="module" src="./mainView.js"></script>
   </body>
 </html>
