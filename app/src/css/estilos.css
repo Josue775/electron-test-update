@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -ms-transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  border: 1px solid #c0392b;
+  min-height: 100vh;
+}
+
+main {
+  padding: 20px;
+  margin-top: 92px;
+  margin-left: 80px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+header {
+  left: 0;
+  right: 0;
+  height: 92px;
+  background: #ffffff;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  border: 1px solid #c0392b;
+}
+
+.logo_menu {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transform: translateX(20px);
+  position: absolute;
+}
+
+.logo {
+  width: 200px;
+  height: 85px;
+  align-self: center;
+  font-size: 20px;
+}
+
+.menu__side {
+  width: 60px;
+  height: 100%;
+  background: #f2f2f2;
+  position: fixed;
+  top: 92px;
+  left: 0;
+  bottom: 0;
+  font-size: 24px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid #c0392b;
+  transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.menu__side::-webkit-scrollbar {
+  display: none;
+}
+
+.menu__side {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.menu_btn {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);/* color: rgb(249, 6, 6); */
+}
+/* #btn_open {
+  color: rgb(255, 255, 255);
+} */
+.menu_btn a:hover {
+  color: rgb(249, 6, 6);
+}
+.menu_btn i {
+  margin-right: 10px;
+}
+
+.menu_btn h5 {
+  font-weight: 300;
+  margin: 0;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.options__menu {
+  padding: 20px 20px;
+  position: absolute;
+  top: 60px;
+}
+
+.options__menu a {
+  color: #000000;
+  cursor: default;
+  display: block;
+  position: relative;
+  transition: color 400ms;
+}
+
+.options__menu a:hover {
+  color: rgb(249, 6, 6);
+}
+
+.options__menu .option {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.options__menu .option i {
+  width: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.options__menu .option h4 {
+  font-weight: 300;
+  cursor: pointer;
+}
+
+a.selected {
+  color: #c0392b;
+}
+
+.selected:before {
+  content: '';
+  width: 3px;
+  height: 80%;
+  background: white;
+  position: absolute;
+  top: 10%;
+  left: -30px;
+}
+
+.body_move {
+  margin-left: 250px;
+}
+
+.menu__side_move {
+  width: 250px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .body_move {
+    margin-left: 0px;
+  }
+
+  .menu__side_move {
+    width: 80px;
+    left: -80px;
+  }
+}
+
+.options__menu .sub-menu {
+  display: none;
+}
+
+.options__menu .sub-menu.active {
+  display: block;
+}
+
+.options__menu .option.selected {
+  background-color: #5f6165;
+  color: white;
+}
+
+.options__menu .sub-menu .option {
+  background-color: #5f6165;
+  color: #ffffff;
+  padding-left: 10px;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.options__menu .selected:before {
+  content: '';
+  width: 3px;
+  height: 80%;
+  background: white;
+  position: absolute;
+  top: 10%;
+  left: -30px;
+}

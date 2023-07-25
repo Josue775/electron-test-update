@@ -1,19 +1,20 @@
-const { app, BrowserWindow, ipcMain, globalShortcut } = require("electron");
+const { app, BrowserWindow, ipcMain, globalShortcut,Notification } = require("electron");
 const path = require("path");
 
 class MainScreen {
   window;
 
   position = {
-    width: 1000,
-    height: 600,
+   
     maximized: false,
   };
 
   constructor() {
     this.window = new BrowserWindow({
-      width: this.position.width,
-      height: this.position.height,
+      // width: this.position.width,
+      // height: this.position.height,
+      width: 900,
+      height: 700,
       title: "This is a test application",
       show: false,
       removeMenu: true,
@@ -22,6 +23,7 @@ class MainScreen {
       webPreferences: {
         contextIsolation: true,
         nativeWindowOpen: true,
+        webSecurity: true,
         preload: path.join(__dirname, "./mainPreload.js"),
       },
     });
@@ -61,5 +63,39 @@ class MainScreen {
     //Ipc functions go here.
   }
 }
+class InicioScreen {
+  window;
 
-module.exports = MainScreen;
+  constructor() {
+    this.window = new BrowserWindow({
+      width: 900,
+      height: 700,
+      acceptFirstMouse: true,
+      autoHideMenuBar: true,
+      webPreferences: {
+        contextIsolation: true,
+        nativeWindowOpen: true,
+        webSecurity: true,
+        preload: path.join(__dirname, './inicio.js')
+      }
+    });
+
+    this.window.once("ready-to-show", () => {
+      this.window.show();
+    });
+
+    this.window.loadFile("./screens/main/inicio.html");
+  }
+
+  // Aquí puedes agregar métodos y funciones específicas para la ventana de inicio, si es necesario.
+
+  close() {
+    this.window.close();
+    ipcMain.removeAllListeners(); // Esto puede no ser necesario aquí, depende de tu lógica global de IPC
+  }
+
+  hide() {
+    this.window.hide();
+  }
+}
+module.exports = { MainScreen, InicioScreen };

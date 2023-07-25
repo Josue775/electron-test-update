@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/electron@15.2.0/dist/renderer/api/notification.js"></script> -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <style>
+      body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+          border: red;
+      }
+      
+      .logo_menu2 {
+          text-align: center;
+          margin-bottom: 10px;
+      }
+      
+      .logo2 {
+          width: 800px;
+          height: 550px;
+          max-width: 100%;
+          max-height: 100%;
+      }
+      
+      #login-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      
+      #btnInicio {
+          margin-top: 10px;
+          padding: 10px 10px;
+          font-size: 16px;
+          padding-top:15px;
+          padding-bottom:15px;
+          padding-left:40px;
+          padding-right:40px;
+          background-color:#ff0000;
+          border-color: #8a7979;
+          border-width: 3px;
+          border-style: solid;
+          border-radius:35px;
+          cursor: pointer;
+      }
+  </style>
+
+</head>
+<body>
+    <div class="logo_menu2">
+        <img src="../../src/assets/image/LOGO BUENROSTRO.jpeg" alt="Logo_p" class="logo2">
+
+        <form id="login-form">
+          <!-- Aquí estarán los campos del formulario de inicio de sesión -->
+          <button id="btnInicio" type="button">Iniciar</button>
+
+        </form>
+      </div>
+</body>
+</html>

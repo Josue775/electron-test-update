@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "electron-updater": "^6.1.1",
-    "electron-notifications": "^1.0.0"
+    "electron-notifications": "^1.0.0",
+    "electron-online": "^1.0.0"
   }
 }
